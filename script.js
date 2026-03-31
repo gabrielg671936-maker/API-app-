@@ -8,3 +8,6 @@ fetch("https://tarotapi.dev/api/v1/cards/random?n=10")
   .catch(function (error) {
     // handle what went wrong
   });
+
+
+  //make variable called cards and do cards=response
