@@ -1,44 +1,27 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tarot Reading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot Reading App</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>🔮 Your Tarot Reading</h1>
+  <header>
+    <h1>🔮 Tarot Decision Maker</h1>
+    <p>Ask a question and let the cards guide you.</p>
+  </header>
 
-  <div class="cards">
-    
-    <div class="card">
-      <h2>The Hermit</h2>
-      <p>Take time for reflection and solitude.</p>
+  <main>
+    <div class="input-area">
+      <input type="text" id="userQuestion" placeholder="Type your question here...">
+      <button id="drawButton">Draw Your Tarot Reading</button>
     </div>
 
-    <div class="card">
-      <h2>Wheel of Fortune</h2>
-      <p>Change is coming—be ready.</p>
-    </div>
+    <div class="cards"></div>
+  </main>
 
-    <div class="card">
-      <h2>The Star</h2>
-      <p>Hope and healing are on your side.</p>
-    </div>
-
-    <div class="card">
-      <h2>Ace of Cups</h2>
-      <p>New emotional beginnings are ahead.</p>
-    </div>
-  </div>
-   <!-- Link to the external JavaScript file -->
-   <script src="script.js"></script>
-</body>
-</html>
-
-
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
