@@ -2,6 +2,12 @@ const button = document.getElementById("drawButton");
 const input = document.getElementById("userQuestion");
 const container = document.querySelector(".cards");
 
+const imageMap = {
+  "The Fool": "images/the-fool.jpg",
+  "The Magician": "images/the-magician.png",
+  "The Empress": "images/the-empress.png"
+};
+
 button.addEventListener("click", () => {
   const question = input.value.trim();
 
@@ -10,19 +16,16 @@ button.addEventListener("click", () => {
     return;
   }
 
-
-  // https://youtu.be/zUcc4vW-jsI needed a little help so i refereced to this video :)
-
   fetch("https://tarotapi.dev/api/v1/cards/random?n=4")
     .then(res => res.json())
     .then(data => {
       const cards = data.cards;
-      container.innerHTML = ""; 
+      container.innerHTML = "";
 
       cards.forEach(card => {
         container.innerHTML += `
           <div class="card">
-            <img src="${card.image}" alt="${card.name}" />
+            <img src="${imageMap[card.name] || 'images/default.png'}" alt="${card.name}" />
             <h2>${card.name}</h2>
             <p>${card.meaning_up}</p>
           </div>
@@ -30,9 +33,7 @@ button.addEventListener("click", () => {
       });
     })
     .catch(err => {
-      container.innerHTML = "<p>Oops! Something went wrong.</p>";
+      container.innerHTML = "<p>Something went wrong.</p>";
       console.error(err);
     });
 });
-
-
