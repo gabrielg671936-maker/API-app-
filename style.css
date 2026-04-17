@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #1e1e2f, #1e1e47);
@@ -18,7 +18,7 @@ header p {
   font-size: 16px;
 }
 
-/* Input Area */
+
 .input-area {
   margin-bottom: 20px;
 }
@@ -47,14 +47,14 @@ button#drawButton:hover {
   transform: scale(1.05);
 }
 
-/* Cards Grid */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
 }
 
-/* Individual Card */
+
 .card {
   background: #2a2a4a;
   border-radius: 12px;
