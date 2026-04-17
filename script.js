@@ -22,6 +22,8 @@ button.addEventListener("click", () => {
     return;
   }
 
+    // https://youtu.be/zUcc4vW-jsI needed a little help so i refereced to this video :)
+
   fetch("https://tarotapi.dev/api/v1/cards/random?n=4")
     .then(res => res.json())
     .then(data => {
